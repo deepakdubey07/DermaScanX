@@ -1,14 +1,14 @@
 # DermaScanX 🔬
 
-An AI-powered skin disease screening web app combining deep learning, a 3-tier inference pipeline, symptom-based diagnosis, an AI doctor chatbot and real-time dermatologist discovery — all in one platform.
+An AI-powered skin disease screening web app combining deep learning, a 3-tier inference pipeline, symptom-based diagnosis, an AI doctor chatbot and real-time dermatologist discovery, all in one platform.
 
 🌐 **Live Demo:** [skinai-cnn-detection.vercel.app](https://skinai-cnn-detection.vercel.app)
 
-> Demo credentials — User: `user` / `user` &nbsp;|&nbsp; Admin: `admin` / `admin`
+> Demo credentials: User: `user` / `user` | Admin: `admin` / `admin`
 
 ## What is DermaScanX?
 
-DermaScanX is a full-stack medical AI web application that helps users screen for skin diseases by uploading or capturing an image of the affected area. The app runs the image through a 3-tier AI inference pipeline, asks targeted diagnostic questions, generates a detailed medical report and connects users with real nearby dermatologists — all within a single seamless workflow.
+DermaScanX is a full-stack medical AI web application that helps users screen for skin diseases by uploading or capturing an image of the affected area. The app runs the image through a 3-tier AI inference pipeline, asks targeted diagnostic questions, generates a detailed medical report and connects users with real nearby dermatologists, all within a single seamless workflow.
 
 Built as a final year academic project using Flask, TensorFlow, EfficientNetV2B0, HuggingFace Transformers, SQLite and deployed on Vercel.
 
@@ -17,42 +17,42 @@ Built as a final year academic project using Flask, TensorFlow, EfficientNetV2B0
 **Login Page**
 ![Login Page](image015.png)
 
-**Scan Page — Upload or Capture Image**
+**Scan Page**
 ![Scan Page](image016.png)
 
-**Diagnosis Quiz — Symptom Verification**
+**Diagnosis Quiz**
 ![Diagnosis Quiz](image017.png)
 
-**Results Page — Full AI Medical Report**
+**Results Page**
 ![Results Page](image018.png)
 
-**Results Page — Detailed Insights**
+**Results Page Continued**
 ![Results Detail](image019.png)
 
 **AI Doctor Chatbot**
 ![AI Doctor Chat](image020.png)
 
-**Nearby Dermatologist Finder with Live Map**
+**Nearby Dermatologist Finder**
 ![Nearby Doctors](image021.png)
 
 **User Dashboard**
 ![Dashboard](image022.png)
 
-**Admin Command Center**
+**Admin Panel**
 ![Admin Panel](image023.png)
 
 ## Key Results
 
 | Metric | Value |
 |---|---|
-| Overall Test Accuracy (Top-1) | **75.82%** |
-| Overall Test Accuracy (Top-3) | **96.72%** |
-| Training Strategy | Feature Extraction + Head Training |
-| Backbone | EfficientNetV2B0 (ImageNet) |
-| Optimizer | AdamW (lr=1e-3, weight_decay=1e-4) |
-| Loss Function | Categorical Cross-Entropy (label smoothing=0.1) |
-| Head Epochs | 200 (with early stopping) |
-| Image Size | 224 × 224 pixels |
+| Overall Test Accuracy Top-1 | **75.82%** |
+| Overall Test Accuracy Top-3 | **96.72%** |
+| Training Strategy | Feature Extraction and Head Training |
+| Backbone | EfficientNetV2B0 ImageNet |
+| Optimizer | AdamW |
+| Loss Function | Categorical Cross-Entropy with label smoothing |
+| Head Epochs | 200 with early stopping |
+| Image Size | 224 x 224 pixels |
 
 **Per-Class Accuracy**
 ![Per Class Accuracy](image011.png)
@@ -67,7 +67,7 @@ The system consists of a Flask backend handling all requests, a SQLite database 
 
 ![Inference Pipeline Flow](image006.png)
 
-The prediction system uses a cascading fallback strategy to ensure maximum reliability — NVIDIA Nemotron-Nano-12B-V2-VL as primary, HuggingFace ViT (LaurianeMD/vit-skin-disease) as secondary and local TFLite EfficientNetV2B0 as the final fallback.
+The prediction system uses a cascading fallback strategy. NVIDIA Nemotron-Nano-12B-V2-VL runs as the primary model, HuggingFace ViT runs as the secondary model and the local TFLite EfficientNetV2B0 CNN acts as the final fallback to ensure the app always returns a result.
 
 ## CNN Model Architecture
 
@@ -83,11 +83,11 @@ EfficientNetV2B0 frozen backbone with ImageNet weights, followed by a custom cla
 
 ![Database Schema](image004.png)
 
-Four entities — USER, PREDICTION, DOCTOR and FEEDBACK — with proper relationships and foreign key constraints.
+Four entities, USER, PREDICTION, DOCTOR and FEEDBACK, with proper relationships and foreign key constraints.
 
-## Dataset — HAM10000
+## Dataset
 
-Trained on the HAM10000 dataset (10,015 dermatoscopic images across 7 classes). Extreme class imbalance was addressed using oversampling.
+Trained on the HAM10000 dataset containing 10,015 dermatoscopic images across 7 classes. Extreme class imbalance was addressed using oversampling before training.
 
 ![Class Distribution](image009.png)
 
@@ -116,17 +116,17 @@ Trained on the HAM10000 dataset (10,015 dermatoscopic images across 7 classes). 
 
 ## Features
 
-**Image Upload & Scanning** — Upload, drag-drop or capture via live camera
+**Image Upload and Scanning** — Upload, drag and drop or capture via live camera
 
-**Diagnosis Quiz** — 5 mandatory symptom questions plus open-ended description fields, disease-specific based on what the model detects
+**Diagnosis Quiz** — 5 mandatory symptom questions plus open-ended description fields, customized based on what the model detects
 
-**Detailed Medical Report** — Top matches with probabilities, visible signs, verification summary, evidence supporting/against, red flags, assurance and calibration, common symptoms, likely cause, contagiousness, common locations, similar diseases, care options, what to avoid, prevention tips, how doctors confirm it and when to see a doctor
+**Detailed Medical Report** — Top matches with probabilities, visible signs, verification summary, supporting and opposing evidence, red flags, assurance and calibration, common symptoms, likely cause, contagiousness, common locations, similar diseases, care options, things to avoid, prevention tips, how doctors confirm the disease and when to see a doctor
 
-**AI Doctor Chatbot** — Context-aware chatbot that knows your diagnosed condition and answers questions about causes, treatment, medication and next steps
+**AI Doctor Chatbot** — Context-aware chatbot that knows your diagnosed condition and answers questions about causes, treatment and medication
 
-**Nearby Dermatologist Finder** — Live location-based map showing nearby hospitals, dermatologists and clinics with directions, call and OSM links
+**Nearby Dermatologist Finder** — Live location based map showing nearby hospitals, dermatologists and clinics with directions and contact options
 
-**Doctor Enrollment & Reviews** — Doctors can register on the platform with specialization, hospital, availability and contact info; patients can leave ratings and reviews
+**Doctor Enrollment and Reviews** — Doctors can register on the platform with their specialization, hospital, availability and contact info and patients can leave ratings and reviews
 
 **Admin Panel** — Full platform oversight with registered users, doctors, total scans, feedback, scan result distribution pie chart and condition counts bar chart
 
@@ -147,7 +147,7 @@ DermaScanX is an academic project built for educational purposes only. It is not
 ## Developer
 
 **Deepak Dubey**
-B.Tech Computer Science, DY Patil International University, Pune (2022–2026)
+B.Tech Computer Science, DY Patil International University, Pune (2022 to 2026)
 
 📧 dubeydeepak0707@gmail.com
 🔗 [LinkedIn](https://linkedin.com/in/deepakdubey07)
