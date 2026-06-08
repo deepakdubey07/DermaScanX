@@ -116,19 +116,19 @@ Trained on the HAM10000 dataset containing 10,015 dermatoscopic images across 7 
 
 ## Features
 
-**Image Upload and Scanning** — Upload, drag and drop or capture via live camera
+**Image Upload and Scanning** - Upload, drag and drop or capture via live camera
 
-**Diagnosis Quiz** — 5 mandatory symptom questions plus open-ended description fields, customized based on what the model detects
+**Diagnosis Quiz** - 5 mandatory symptom questions plus open-ended description fields, customized based on what the model detects
 
-**Detailed Medical Report** — Top matches with probabilities, visible signs, verification summary, supporting and opposing evidence, red flags, assurance and calibration, common symptoms, likely cause, contagiousness, common locations, similar diseases, care options, things to avoid, prevention tips, how doctors confirm the disease and when to see a doctor
+**Detailed Medical Report** - Top matches with probabilities, visible signs, verification summary, supporting and opposing evidence, red flags, assurance and calibration, common symptoms, likely cause, contagiousness, common locations, similar diseases, care options, things to avoid, prevention tips, how doctors confirm the disease and when to see a doctor
 
-**AI Doctor Chatbot** — Context-aware chatbot that knows your diagnosed condition and answers questions about causes, treatment and medication
+**AI Doctor Chatbot** - Context-aware chatbot that knows your diagnosed condition and answers questions about causes, treatment and medication
 
-**Nearby Dermatologist Finder** — Live location based map showing nearby hospitals, dermatologists and clinics with directions and contact options
+**Nearby Dermatologist Finder** - Live location based map showing nearby hospitals, dermatologists and clinics with directions and contact options
 
-**Doctor Enrollment and Reviews** — Doctors can register on the platform with their specialization, hospital, availability and contact info and patients can leave ratings and reviews
+**Doctor Enrollment and Reviews** - Doctors can register on the platform with their specialization, hospital, availability and contact info and patients can leave ratings and reviews
 
-**Admin Panel** — Full platform oversight with registered users, doctors, total scans, feedback, scan result distribution pie chart and condition counts bar chart
+**Admin Panel** - Full platform oversight with registered users, doctors, total scans, feedback, scan result distribution pie chart and condition counts bar chart
 
 ## How to Use
 
